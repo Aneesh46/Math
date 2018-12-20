@@ -1,9 +1,6 @@
 #include "math.hpp"
 
 using namespace std;
-//Math::Math(){
-//	std::cout << "Constructor ";
-//}
 int Math::Multiply(int Num1, int Num2){
 	Mul= Num1 * Num2;
 	std::cout << "Multiplication of "<<Num1<< " * " <<Num2<< " = "<< Mul<<endl;
@@ -26,8 +23,11 @@ int Math::Factorial(int Num){
 	return Fact;
 }
 
-/*void Math::GetTime(void){
-	auto timenow = chrono::system_clock::to_time_t(chrono::system_clock::now()); 
-  
-    cout << ctime(&timenow) << endl;
-}*/
+void Math::GetTime(void){ 
+   std::time_t t = std::time(0);
+   std::tm* now = std::localtime(&t);
+   std::cout << (now->tm_year + 1900) << '-' 
+         << (now->tm_mon + 1) << '-'
+         <<  now->tm_mday
+         << "\n"; 
+}
