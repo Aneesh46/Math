@@ -17,6 +17,7 @@ int Math::Divide(int Num1, int Num2){
 }
 
 int Math::Factorial(int Num){
+	Fact = 1;
 	for(int i=1;i<=Num;i++)
 	{
 		Fact *= i;
@@ -25,8 +26,8 @@ int Math::Factorial(int Num){
 	return Fact;
 }
 
-void Math::GetTime(void){
+/*void Math::GetTime(void){
 	auto timenow = chrono::system_clock::to_time_t(chrono::system_clock::now()); 
   
     cout << ctime(&timenow) << endl;
-}
+}*/
