@@ -8,7 +8,7 @@ class Math
 {
   int Num1;
   int Num2;
-  int Fact, Mul, Div, Num;
+  int Fact, Mul, Div, Num, i;
 
 public:
   int Multiply(int Num1,int Num2);
